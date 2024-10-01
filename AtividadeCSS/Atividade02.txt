@@ -1,0 +1,2 @@
+Seletores são nomeclaturas utilizados para selecionar elementos do CSS. Com isso pode-se estilizar o HTML através dessas marcações.
+Tem seletores por tag do HTML, id, class e .(global) *(universal).
