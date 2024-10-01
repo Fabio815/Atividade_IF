@@ -19,8 +19,12 @@
         }
     </style>
 </head>
+Nesse exemplo não fica tão organizado o código e também não podemos reutilizar de forma efetiva.
+
 
 2)Podemos incluir diretamente na do HTML:
 <span font-family: Georgia, 'Times New Roman', Times, serif;>Cachorro</span>
+Agora nesse exemplo o HTML não fica organizado também, além de sempre dar preverencia à esse CSS sendo ele o mais prioritario.
 
 3)Também podemos incluir com um link, nesse caso o documento CSS fica separado do HTML.
+Esse método é o mais usado, porque além de deixar o HTML e o CSS separado, ele pode ser utilizado em mais páginas HTML.
