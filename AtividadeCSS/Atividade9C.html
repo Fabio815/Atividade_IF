@@ -8,7 +8,6 @@
         *{
             padding: 0px;
             margin: 0px;
-            border: 1px solid black;
         }
         .box{
             border: 1px solid black;
@@ -18,31 +17,31 @@
         }
         #box1{
             background-color: red;
-            position: relative;
+            position: fixed;
         }
         #box2{
             background-color: blue;
-            position: relative;
-            top: 695px;
-            right: 240px;
+            position: fixed;
+            right: 0px;
+            top: 0px;
         }
         #box3{
             background-color: yellow;
-            position: relative;
-            top: 695px;
-            left: 1195px;
+            position: fixed;
+            bottom: 0px;
         }
         #box4{
             background-color: green;
-            position: relative;
-            left: 958px;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
         }
         #box5{
             background-color: rgb(124, 0, 128);
-            position: relative;
-            top: 50vh;
-            right: 20vh;
-            bottom: 50%;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
