@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: grid;
+            grid-template-areas: 
+            "head head head"
+            "menu main aside"
+            "footer footer footer" 
+            ;
+        }
+        .d1
+        {
+            grid-area: head;
+            text-align: center;
+            background-color: yellow;
+        }
+        .d2
+        {
+            grid-area: banner;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">HEAD</div>
+    <div class="d2">Banner</div>
+    <div class="d3">Menu</div>
+    <div class="d4">Main</div>
+    <div class="d5">aside</div>
+    <div class="div">footer</div>
+</body>
+</html>
