@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sei não</title>
+    <title>Exemplo 04</title>
 </head>
 <body>
-    
+    <button id="boto">Gerar número</button>
+    <p id="resultado"></p>
+    <script>
+
+        let botao = document.querySelector("#boto");
+        botao.addEventListener('click', ()=>{
+            let num = Math.trunc(Math.random() * (100 - 50) + 50);
+            document.querySelector("#resultado").innerHTML = num;
+
+        });
+    </script>
 </body>
 </html>
