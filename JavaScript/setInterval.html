@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p></p>
+    <span id="hora"></span>
+    <span id="min"></span>
+    <span id="sec"></span>
+    <span id="mili"></span>
     <script>
-        let p = document.querySelector("p");
+
+        let hora = document.querySelector("#hora");
+        let min = document.querySelector("#min");
+        let sec = document.querySelector("#sec");
+        let mili = document.querySelector("#mili");
+        let run = true;
+        let intervalo;
+
+        function atualizarRelogio(){
+            let agora = new Date();
+            hora.innerHTML = agora.getHours();
+            min.innerHTML = agora.getMinutes();
+            sec.innerHTML = agora.getSeconds();
+            mili.innerHTML = agora.getMilliseconds();
+        }
+    document.addEventListener("DOMContentLoaded", () => {
+            if(run){
+                intervalo = setInterval(atualizarRelogio, 1);
+                run = false;
+            } else {
+                clearInterval(intervalo);
+                run = true;
+            }
+        });
+
+        document.addEventListener("keydown",() => {
+            if(run){
+                intervalo = setInterval(atualizarRelogio, 1);
+                run = false;
+            } else {
+                clearInterval(intervalo);
+                run = true;
+            }
+        });
+
+        /*let p = document.querySelector("p");
         let cont = 0;
-        setInterval(() => {p.innerHTML = cont++}, 1000);
+        setInterval(() => {p.innerHTML = cont++}, 1000);*/
     </script>
 </body>
 </html>
