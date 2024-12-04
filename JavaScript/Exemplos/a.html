@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local</title>
+</head>
+<body>
+    <input type="text" id="nota">
+    <button id="salvar">Salvar</button>
+    <ul id="ul">
+
+    </ul>
+    <script>
+        let inputNota = document.querySelector("#nota");
+        let botaoSalvar = document.querySelector("#salvar");
+        let lista = document.querySelector("#ul");
+        let contador = 0;
+
+        const array = [];
+        function atualizar(){
+            array.forEach((nota) => {
+                let 
+            })
+        }
+
+        botaoSalvar.addEventListener('click', () => {
+            array.push(inputNota.value);
+            localStorage.setItem(array.length-1, array[array.length-1]);
+        });
+
+    </script>
+</body>
+</html>

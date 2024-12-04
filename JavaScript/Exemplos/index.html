@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let pala = document.querySelector("p");
+        document.body.addEventListener("keypress", (e) => {
+            pala.innerHTML += e.key
+        });
+    </script>
+</body>
+</html>
