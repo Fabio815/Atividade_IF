@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="key" id="key">
+    <div class="filmes"></div>
+    <button class="btn">Buscar</button>
+    <script>
+        let inputText = document.querySelector("#key");
+        document.querySelector("button").addEventListener('click', ()=>{
+            document.querySelector(".filme").innerHTML="";
+            buscarFilme(inputText.value);
+        })
+        //Acessar o OMDb
+        function buscarFilme(keywork){
+            apiKey = "f77bfada";
+            url = `https://http://www.omdbapi.com/?s=${keywork}&apikey=`+apiKey;
+
+            fetch(url)
+            .then(response => response.json())
+            .then(dados => {
+                console.log(dados);
+                dados.forEach(element => {
+                    document.querySelector(".filmes").innerHTML += bannerFilme(element);
+                });
+            })
+        }
+        
+        function bannerFilme(json){
+            poster = `<div class="poster"
+                        <h2>${json.Title}</h2>
+                        <img src ${json.Poster}>
+                        ></div>`
+            return poster;
+        }
+
+    </script>
+</body>
+</html>

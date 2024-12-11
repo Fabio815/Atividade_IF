@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="status"></div>
+    <div id="pessoas"></div>
+    <script>
+        //Abre a requisição
+        var xhhtp = XMLHttpRequest();
+        xhhtp.onreadystatechange = function (){
+            if(this.readyState == 4 && this.status == 200){
+                var dstatus = document.getElementById("status");
+                dstatus.innerHTML += "readyState:" + this.readyState + this.responseText + "status:" + status;
+
+                var pessoas = JSON.parse(this.responseText);
+                var divpessoas = document.getElementById("pessoas");
+                divpessoas.innerHTML += 
+                `<div>
+                    <p> Nome: ${pessoas[0].nome}</p>
+                    <p> Idade: ${pessoas[0].idade}</p>
+                    <p> Profissão: ${pessoas[0].profissao}</p>
+                    <p> Salário: ${pessoas[0].salario}</p>
+                 </div>   `
+            }
+
+            if(this.readyState == 4 && this.status == 400){
+                alert("Não encontrado");
+            }
+        }
+        //Executa a requisição.
+        xhhtp.open("GET", "pessoas.json", true);
+        xhhtp.send();
+
+    </script>
+</body>
+</html>

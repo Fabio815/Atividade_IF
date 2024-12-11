@@ -1,0 +1,11 @@
+[{
+    "nome": "Pedro",
+    "idade": "21",
+    "profissao": "Desenvolvedor JR",
+    "Salario": 4.000
+}, {
+    "nome": "Pedro",
+    "idade": "20",
+    "profissao": "Advogado",
+    "Salario": 5.000
+}]

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pessoas"></div>
+    <script>
+        var pessoas = document.getElementById("pessoas");
+        fetch("pessoas.json")
+        //Pega o retorno como json
+        .then( s => s.json())
+        .then( data=>{
+            document.getElementById("pessoas").innerHTML = data[0].nome
+        })
+    </script>
+</body>
+</html>

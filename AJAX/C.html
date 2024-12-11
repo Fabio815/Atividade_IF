@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="piadas"></div>
+    <script>
+        var p = document.getElementById("piadas");
+
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(res => res.json())
+        .then(dados => {
+            console.log(JSON.stringify(dados))
+            var piada = `<p id="dtcriacao"> ${dados.created_at}</p>
+                         <img id="icon" src="${dados.icon_url}" >
+                         <p id="piada"> ${dados.value} </p>
+            `
+            p.innerHTML = piada;
+        })
+    </script>
+</body>
+</html>
